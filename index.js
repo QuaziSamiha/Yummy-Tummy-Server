@@ -108,9 +108,7 @@ client.connect(err => {
   })
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
-})
+app.listen(process.env.PORT || port)
 
 // https://github.com/Porgramming-Hero-web-course/complete-website-server-QuaziSamiha
 
