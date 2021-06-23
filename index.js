@@ -57,7 +57,7 @@ client.connect(err => {
     const newReview = req.body;
     reviewCollection.insertOne(newReview)
       .then(result => {
-        res.send(result.insertedCount);
+        res.send(result.insertedCount > 0);
       })
   })
 
@@ -73,7 +73,7 @@ client.connect(err => {
     const newService = req.body;
     serviceCollection.insertOne(newService)
       .then(result => {
-        res.send(result.insertedCount)
+        res.send(result.insertedCount > 0)
       })
   })
 
